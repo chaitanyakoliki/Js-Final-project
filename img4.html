@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- ------------------------------------------------------ -->
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- ------------------------------------------------------ -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/img.css">
+    <!-- -----------------------------------------------------  -->
+    <!-- cart -->
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- cart -->
+    <!-- ---------------------------------------------------------  -->
+  
+ </head>   
+<body>
+<div class="main">
+  
+  <!-- navigation -->
+  <div class="navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">SHOPEE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item "><a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item active"><a class="nav-link" href="products.html">Products</a></li>
+        <li class="nav-item "><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item "><a class="nav-link" href="contact.html">contact us</a></li>
+        
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <div class="navbar-nav ms-auto">
+        <div class="dropdown">
+          <a class="btn  dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Account
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="login.html">Login</a>
+            <a class="dropdown-item" href="register.html">Register</a>
+          </div>
+        </div>
+        <a href="addcart.html" ><img src="images/cart.png" alt="" id="cart-icon"></a>
+        <!-- <i class='bx bxs-cart-alt' style='color:#ffffff'  ></i> -->
+    </div>
+    </div>
+  </nav>
+  </div>
+  <!-- navigation end -->
+
+  <!----------single product details-------->
+  <div class="small-container single-product" data-aos="fade-up">
+    <div class="row">
+        <div class="col-2">
+            <img src="images/k1.jpg" width="100%" id="ProductImg" />
+            <div class="small-img-row">
+                <div class="small-img-col">
+                    <img src="images/k1.jpg" width="100%" class="small-img" />
+                </div>
+                <div class="small-img-col">
+                    <img src="images/k2.jpg" width="100%" class="small-img" />
+                </div>
+                <div class="small-img-col">
+                    <img src="images/k3.jpg" width="100%" class="small-img" />
+                </div>
+                <div class="small-img-col">
+                    <img src="images/k4.jpg" width="100%" class="small-img" />
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <p><a href="./allproducts.html">Home</a> / Kurta</p>
+            <h1 id="productName">GoSriKi Women's Rayon Kurta with Pant</h1>
+            <h4 style="display: flex">
+                Rs.&nbsp;
+                <p id="productPrice" style="margin-right: 0.25em">250</p>
+            </h4>
+          
+            <select id="productSize">
+                <option>XXL</option>
+                <option>XL</option>
+                <option>Large</option>
+                <option selected>Medium</option>
+                <option>Small</option>
+            </select>
+            <button class="btn-quantity" onClick="decreaseQuantity()">-</button>
+            <input type="number" value="1" min="1" id="productQuantity" oninput="checkValid()" />
+            <button type="button" class="btn-quantity" onClick="increaseQuantity()">+</button>
+
+            <!-- <a href="" class="btn">Add To Cart</a> -->
+            <p onclick="func()" class="btn1">Add To Cart</p>
+            <h3>Product Details<i class="fa fa-indent"></i></h3>
+            <br />
+            <p>
+                Care Instructions: Hand Wash Only
+                Fit Type: Regular
+                Kurta Fabric: Rayon
+                Package Contain: Kurti With Pant
+                Style: Kurta – Straight Neckline: V- Neck Sleeve Pattern: Normal Sleeve Length: 3/4th
+                Design Name: Printed; Age Range Description: Adult; Sleeve Type: 3/4 Sleeve
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- -------------title--------------- -->
+<div class="small-container">
+    <div class="row row-2" data-aos="fade-up">
+        <h2>Related Products</h2>
+        <p><a href="./products.html" class="viewMore--btn">View More</a></p>
+    </div>
+</div>
+
+ <!-- ---------------product---------------- -->
+ <div class="small-container">
+    <div class="row">
+        <div class="col-4" id="box" data-aos="fade-up">
+        
+            <a href="img12.html">
+            <img src="images/kid_girl1.jpg">
+            </a>
+            <a href="img12.html">
+            <h4>Shubhkala Beige Embellished Mukaish Work Georgette Semi Stitched Lehenga</h4>
+            </a>
+            <div class="rating">
+                <!-- for adding star cdn link-> font awesome 4cdn by stackpath -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Rs. 3550</p>
+        </div>
+        <div class="col-4" id="box" data-aos="fade-up">
+            <a href="img11.html">
+            <img src="images/b1.jpg">
+            </a>
+            <a href="img11.html">
+            <h4>Black Embellished Sequinned Semi Stitched Lehenga & Unstitched Blouse With Dupatta</h4>
+            </a>
+            <div class="rating">
+                <!-- for adding star cdn link-> font awesome 4cdn by stackpath -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Rs. 2475</p>
+        </div>
+        <div class="col-4" id="box" data-aos="fade-up">
+            <a href="img9.html">
+            <img src="images/tt1.jpg">
+            </a>
+            <a href="img9.html">
+            <h4>Cali Blue Block Heels</h4>
+            </a>
+            <div class="rating">
+                <!-- for adding star cdn link-> font awesome 4cdn by stackpath -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>Rs. 450.00</p>
+        </div>
+        <div class="col-4" id="box" data-aos="fade-up">
+            <a href="img8.html">
+            <img src="images/j1.jpg">
+            </a>
+            <a href="img8.html">
+            <h4>Men Black Cotton Silk Kurta</h4>
+            </a>
+            <div class="rating">
+                <!-- for adding star cdn link-> font awesome 4cdn by stackpath -->
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Rs. 650.00</p>
+        </div>
+    </div>
+    <div id="toast">Multicolour Printed White T-Shirt</div>
+</div>
+  <!-- footer -->
+<div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Download Our App</h3>
+          <p>Download App for android and ios mobile phone.</p>
+          <div class="app-logo">
+            <img src="images/play-store.png" alt="">
+            <img src="images/app-store.png" alt="">
+          </div>
+        </div>
+  
+        <div class="footer-col-2">
+          <img src="images/name_logo.png" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+  
+        <div class="footer-col-3">
+          <h3>Useful Links</h3>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Post</li>
+            <li>Return Policy</li>
+            <li>Join Affiliate</li>
+          </ul>
+        </div>
+  
+        <div class="footer-col-4">
+          <h3>Follow us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>YouTube</li>
+          </ul>
+        </div>
+      </div>
+  
+      <hr>
+      <p class="copyright">Copyright 2023 -Chaitanya Koliki</p>
+    </div>
+  </div>
+   <!-- --------------JS for toggle menu--------- -->
+  
+<!-- ----------------------JS for Product gallery------------------ -->
+<script>
+    var ProductImg = document.getElementById("ProductImg");
+    var SmallImg = document.getElementsByClassName("small-img");
+    SmallImg[0].onclick = function() {
+        ProductImg.src = SmallImg[0].src;
+    };
+    SmallImg[1].onclick = function() {
+        ProductImg.src = SmallImg[1].src;
+    };
+    SmallImg[2].onclick = function() {
+        ProductImg.src = SmallImg[2].src;
+    };
+    SmallImg[3].onclick = function() {
+        ProductImg.src = SmallImg[3].src;
+    };
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    const user = {
+        cart: []
+    };
+    let userString = JSON.stringify(user);
+    if (!localStorage.getItem("user")) {
+        localStorage.setItem("user", userString);
+    }
+    let func = () => {
+        let img = document.getElementById("ProductImg");
+        let productName = document.getElementById("productName").textContent;
+        let productPrice = parseFloat(
+            document.getElementById("productPrice").textContent
+        );
+        let select = document.getElementById("productSize");
+        let productSize = select.options[select.selectedIndex].value;
+        let productQuantity = parseFloat(
+            document.getElementById("productQuantity").value
+        );
+        let isProductDuplicate = false;
+        let id = 3;
+        let product = {
+            id,
+            img: img.src,
+            productName,
+            productPrice,
+            productSize,
+            productQuantity,
+        };
+        console.log("product: ", product);
+        userString2 = localStorage.getItem("user");
+        const retrievedUser = JSON.parse(userString2);
+        console.log("user after retrieving: ", retrievedUser);
+
+        retrievedUser.cart.forEach(cartItem => {
+            if (cartItem.id === product.id && cartItem.productSize === product.productSize) {
+                cartItem.productQuantity = +cartItem.productQuantity + +product.productQuantity
+                isProductDuplicate = true;
+            }
+        })
+        if (!isProductDuplicate) retrievedUser.cart.push(product);
+
+        console.log("user after updating: ", retrievedUser);
+        const updatedUserString = JSON.stringify(retrievedUser);
+        localStorage.setItem("user", updatedUserString);
+        showToast();
+    };
+
+   
+
+    const showToast = () => {
+        let toast = document.getElementById("toast");
+        toast.className = "showToast";
+
+        setTimeout(function() {
+            toast.className = toast.className.replace("showToast", "");
+        }, 3000);
+    }
+
+
+    const increaseQuantity = () => {
+        const productQuantity = document.querySelector("#productQuantity");
+        productQuantity.value = Number(productQuantity.value) + 1;
+    }
+
+    const decreaseQuantity = () => {
+        const productQuantity = document.querySelector("#productQuantity");
+        if (productQuantity.value >= 2)
+            productQuantity.value = Number(productQuantity.value) - 1;
+    }
+
+    const checkValid = () => {
+        const productQuantity = document.querySelector("#productQuantity");
+        if (Number(productQuantity.value) < 1) {
+            productQuantity.value = 1;
+        }
+    }
+</script>
+   
+
+  
+  
+  
+  <!-- ---------------------------------------------------------------  -->
+  
+  
+  </body>
+  </html>

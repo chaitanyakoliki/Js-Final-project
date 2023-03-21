@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- ------------------------------------------------------ -->
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- ------------------------------------------------------ -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/addcart.css">
+     <link rel="stylesheet" href="css/products.css">  
+    <!-- <link rel="stylesheet" href="css/img.css">    -->
+
+
+    
+   
+    <!-- -----------------------------------------------------  -->
+    <!-- cart -->
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- javascript -->
+    <!-- cart -->
+    <!-- ---------------------------------------------------------  -->
+  
+ </head>   
+<body>
+<div class="main">
+  
+  <!-- navigation -->
+  <div class="navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">SHOPEE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+        <li class="nav-item "><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item "><a class="nav-link" href="contact.html">contact us</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <div class="navbar-nav ms-auto">
+        <div class="dropdown">
+          <a class="btn  dropdown-toggle"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Account
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="login.html">Login</a>
+            <a class="dropdown-item" href="register.html">Register</a>
+          </div>
+        </div>
+        <a href="addcart.html" ><img src="images/cart.png" alt="" ></a>
+        <!-- <i class='bx bxs-cart-alt' style='color:#ffffff'  ></i> -->
+    </div>
+    </div>
+  </nav>
+  </div>
+  <!-- navigation end -->
+
+    <!-- --------------------cart item details--------->
+    <div class="small-container cart-page">
+        <table id="table">
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="total-price" data-aos="fade-up" id="subtotal-section">
+        </div>
+        <div id="storedItems"></div>
+         <div id="empty-cart">
+            <p>No products added to the cart.</p>
+            <a href="products.html" class="btn-add">Add Products</a>
+        </div>     
+
+    </div>
+    
+    <div class="total-price">
+        <a href="payment.html" class="btn2">Proceed to checkout &#8594;</a>
+    </div>
+
+  <!-- footer -->
+<div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Download Our App</h3>
+          <p>Download App for android and ios mobile phone.</p>
+          <div class="app-logo">
+            <img src="images/play-store.png" alt="">
+            <img src="images/app-store.png" alt="">
+          </div>
+        </div>
+  
+        <div class="footer-col-2">
+          <img src="images/name_logo.png" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+  
+        <div class="footer-col-3">
+          <h3>Useful Links</h3>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Post</li>
+            <li>Return Policy</li>
+            <li>Join Affiliate</li>
+          </ul>
+        </div>
+  
+        <div class="footer-col-4">
+          <h3>Follow us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>YouTube</li>
+          </ul>
+        </div>
+      </div>
+  
+      <hr>
+      <p class="copyright">Copyright 2023 - Chaitanya Koliki </p>
+    </div>
+  </div>
+
+ <!-------------------------Script part ------------------------>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    const table = document.getElementById("table").innerHTML;
+    const userString = localStorage.getItem("user");
+    const retrievedUser = JSON.parse(userString);
+
+    //to update Quantity of items using the input element
+    function updateQty(element) {
+        if (element.value < 12) {
+            window.alert("Quantity of items can not be negative!")
+            element.value = Math.abs(element.value);
+        }
+        const idNumber = `${element.id.split("-")[1]}`;
+        retrievedUser.cart[idNumber].productQuantity = element
+            .value; //updates the productQuantity of item in the cart array using the input element's value
+        let updatedCart = {
+                cart: retrievedUser.cart
+            } //saving the new cart array to a new variable in the format how cart items are saved
+            // console.log(updatedCart)
+        localStorage.setItem("user", JSON.stringify(updatedCart)) //updating the localStorage cart items
+        renderItemsAndCosts();
+    }
+
+    function renderItemsAndCosts() {
+        let id = -1;
+        let subTotal = 0;
+        let tbodyRef = document
+            .getElementById("table")
+            .getElementsByTagName("tbody")[1];
+        tbodyRef.innerHTML = "" //clearing before rendering items from localhost
+        retrievedUser.cart.forEach((item) => {
+            id++; //id assignment starts from 0
+
+            // Insert a row at the end of table
+            let newRow = tbodyRef.insertRow();
+
+            // Insert a cell at the end of the row
+            let newCell = newRow.insertCell();
+            newCell.innerHTML =
+                `<div class='cartinfo' data-aos='fade-up'><img src='${item.img}' /><div><p>${item.productName}</p><small>Size: ${item.productSize}, Price: ${item.productPrice} Rs.</small><br /><span class="remove-btn" id="remove-${id}" onclick="removeItem()">Remove</span></div></div>`;
+
+            newCell = newRow.insertCell();
+            newCell.innerHTML +=
+                `<input type='number' value='${item.productQuantity}' data-aos="fade-up" onchange="updateQty(this)" id="updateQty-${id}" min="1"/>`;
+
+            newCell = newRow.insertCell();
+            newCell.innerHTML +=
+                `<div data-aos="fade-up">Rs. ${item.productPrice * item.productQuantity}</div>`;
+            subTotal += item.productPrice * item.productQuantity;
+        });
+
+        document.getElementById(
+            "subtotal-section"
+        ).innerHTML = `<table><tr><td>Subtotal</td><td>Rs. ${subTotal}</td></tr><tr><td>GST</td><td>Rs. ${Number(
+    (subTotal / 7.78).toFixed(2)
+  )}</td></tr><tr><td>Total</td><td>Rs. ${Number(
+    (subTotal + subTotal / 7.78).toFixed(2)
+  )}</td></tr></table>`;
+    }
+    renderItemsAndCosts(); //rendering the cart items and the costs initially
+    // to remove the row of item
+    function removeItem() {
+        const idNumber = event.target.id.split("-")[1]; //eg. if remove-3 btn is clicked, idNumber = 3
+        retrievedUser.cart.splice(idNumber,
+            1); //removing the item from the cart array, whose 'remove' button is clicked
+        let updatedCart = {
+                cart: retrievedUser.cart
+            } //saving the new cart array to a new variable in the format how cart items are saved
+            // console.log(updatedCart)
+        localStorage.setItem("user", JSON.stringify(updatedCart)) //updating the localStorage cart items
+        renderItemsAndCosts();
+        showToast();
+        checkForItemsInCart();
+    }
+    
+
+    const checkForItemsInCart = () => {
+        const productTable = document.getElementById("table");
+        const subtotalSection = document.getElementById("subtotal-section");
+        const storedItems = document.getElementById("storedItems");
+        const emptyCart = document.getElementById("empty-cart");
+        if (retrievedUser.cart.length === 0) {
+            productTable.classList.add("hidden");
+            subtotalSection.classList.add("hidden");
+            storedItems.classList.add("hidden");
+            emptyCart.classList.remove("hidden")
+        } else {
+            emptyCart.classList.add("hidden");
+            productTable.classList.remove("hidden")
+            subtotalSection.classList.remove("hidden")
+            storedItems.classList.remove("hidden")
+        }
+    }
+    checkForItemsInCart();
+</script>
+  
+  
+  <!-- ---------------------------------------------------------------  -->
+  
+  
+  </body>
+  </html>
